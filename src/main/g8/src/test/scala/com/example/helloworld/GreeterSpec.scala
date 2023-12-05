@@ -1,10 +1,11 @@
 //#full-example
 package com.example.helloworld
 
-import akka.actor.testkit.typed.scaladsl.ActorTestKit
-import akka.actor.typed.ActorSystem
-import akka.actor.typed.scaladsl.Behaviors
-import akka.grpc.GrpcClientSettings
+import org.apache.pekko
+import pekko.actor.testkit.typed.scaladsl.ActorTestKit
+import pekko.actor.typed.ActorSystem
+import pekko.actor.typed.scaladsl.Behaviors
+import pekko.grpc.GrpcClientSettings
 
 import com.typesafe.config.ConfigFactory
 
@@ -24,7 +25,7 @@ class GreeterSpec
   implicit val patience: PatienceConfig = PatienceConfig(scaled(5.seconds), scaled(100.millis))
 
   // important to enable HTTP/2 in server ActorSystem's config
-  val conf = ConfigFactory.parseString("akka.http.server.enable-http2 = on")
+  val conf = ConfigFactory.parseString("pekko.http.server.enable-http2 = on")
     .withFallback(ConfigFactory.defaultApplication())
 
   val testKit = ActorTestKit(conf)

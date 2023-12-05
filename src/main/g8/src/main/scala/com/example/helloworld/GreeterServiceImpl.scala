@@ -3,13 +3,14 @@ package com.example.helloworld
 //#import
 import scala.concurrent.Future
 
-import akka.NotUsed
-import akka.actor.typed.ActorSystem
-import akka.stream.scaladsl.BroadcastHub
-import akka.stream.scaladsl.Keep
-import akka.stream.scaladsl.MergeHub
-import akka.stream.scaladsl.Sink
-import akka.stream.scaladsl.Source
+import org.apache.pekko
+import pekko.NotUsed
+import pekko.actor.typed.ActorSystem
+import pekko.stream.scaladsl.BroadcastHub
+import pekko.stream.scaladsl.Keep
+import pekko.stream.scaladsl.MergeHub
+import pekko.stream.scaladsl.Sink
+import pekko.stream.scaladsl.Source
 
 //#import
 

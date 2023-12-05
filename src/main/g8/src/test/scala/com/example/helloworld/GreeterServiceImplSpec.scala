@@ -1,8 +1,9 @@
 //#full-example
 package com.example.helloworld
 
-import akka.actor.testkit.typed.scaladsl.ActorTestKit
-import akka.actor.typed.ActorSystem
+import org.apache.pekko
+import pekko.actor.testkit.typed.scaladsl.ActorTestKit
+import pekko.actor.typed.ActorSystem
 
 import org.scalatest.BeforeAndAfterAll
 import org.scalatest.concurrent.ScalaFutures

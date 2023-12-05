@@ -3,87 +3,72 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                       http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <name>Akka gRPC Scala example project</name>
+  <name>Pekko gRPC Scala example project</name>
   <groupId>com.example.helloworld</groupId>
-  <artifactId>akka-grpc-helloworld-scala</artifactId>
+  <artifactId>pekko-grpc-helloworld-scala</artifactId>
   <version>0.1-SNAPSHOT</version>
 
   <properties>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
-    <akka.version>$akka_version$</akka.version>
-    <akka.grpc.version>$akka_grpc_version$</akka.grpc.version>
+    <pekko.version>$pekko_version$</pekko.version>
+    <pekko.grpc.version>$pekko_grpc_version$</pekko.grpc.version>
     <scala.binary.version>$scala_major_version$</scala.binary.version>
     <project.encoding>UTF-8</project.encoding>
   </properties>
 
-  <repositories>
-    <repository>
-      <id>akka-repository</id>
-      <name>Akka library repository</name>
-      <url>https://repo.akka.io/maven</url>
-    </repository>
-  </repositories>
-  <pluginRepositories>
-    <pluginRepository>
-      <id>akka-repository</id>
-      <name>Akka library repository</name>
-      <url>https://repo.akka.io/maven</url>
-    </pluginRepository>
-  </pluginRepositories>
-
   <dependencies>
     <dependency>
-      <groupId>com.typesafe.akka</groupId>
-      <artifactId>akka-actor-typed_\${scala.binary.version}</artifactId>
-      <version>\${akka.version}</version>
+      <groupId>org.apache.pekko</groupId>
+      <artifactId>pekko-actor-typed_\${scala.binary.version}</artifactId>
+      <version>\${pekko.version}</version>
     </dependency>
     <dependency>
-      <groupId>com.typesafe.akka</groupId>
-      <artifactId>akka-discovery_\${scala.binary.version}</artifactId>
-      <version>\${akka.version}</version>
+      <groupId>org.apache.pekko</groupId>
+      <artifactId>pekko-discovery_\${scala.binary.version}</artifactId>
+      <version>\${pekko.version}</version>
     </dependency>
     <dependency>
-      <groupId>com.typesafe.akka</groupId>
-      <artifactId>akka-stream_\${scala.binary.version}</artifactId>
-      <version>\${akka.version}</version>
+      <groupId>org.apache.pekko</groupId>
+      <artifactId>pekko-stream_\${scala.binary.version}</artifactId>
+      <version>\${pekko.version}</version>
     </dependency>
     <dependency>
-      <groupId>com.typesafe.akka</groupId>
-      <artifactId>akka-pki_\${scala.binary.version}</artifactId>
-      <version>\${akka.version}</version>
+      <groupId>org.apache.pekko</groupId>
+      <artifactId>pekko-pki_\${scala.binary.version}</artifactId>
+      <version>\${pekko.version}</version>
     </dependency>
 
     <dependency>
-      <groupId>com.lightbend.akka.grpc</groupId>
-      <artifactId>akka-grpc-runtime_\${scala.binary.version}</artifactId>
-      <version>\${akka.grpc.version}</version>
+      <groupId>org.apache.pekko</groupId>
+      <artifactId>pekko-grpc-runtime_\${scala.binary.version}</artifactId>
+      <version>\${pekko.grpc.version}</version>
     </dependency>
 
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
-      <version>1.2.3</version>
+      <version>1.2.13</version>
     </dependency>
 
     <dependency>
-      <groupId>com.typesafe.akka</groupId>
-      <artifactId>akka-actor-testkit-typed_\${scala.binary.version}</artifactId>
-      <version>\${akka.version}</version>
+      <groupId>org.apache.pekko</groupId>
+      <artifactId>pekko-actor-testkit-typed_\${scala.binary.version}</artifactId>
+      <version>\${pekko.version}</version>
       <scope>test</scope>
     </dependency>
 
     <dependency>
-      <groupId>com.typesafe.akka</groupId>
-      <artifactId>akka-stream-testkit_\${scala.binary.version}</artifactId>
-      <version>\${akka.version}</version>
+      <groupId>org.apache.pekko</groupId>
+      <artifactId>pekko-stream-testkit_\${scala.binary.version}</artifactId>
+      <version>\${pekko.version}</version>
       <scope>test</scope>
     </dependency>
 
     <dependency>
       <groupId>org.scalatest</groupId>
       <artifactId>scalatest_\${scala.binary.version}</artifactId>
-      <version>3.2.12</version>
+      <version>3.2.17</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -105,9 +90,9 @@
       </plugin>
 
       <plugin>
-        <groupId>com.lightbend.akka.grpc</groupId>
-        <artifactId>akka-grpc-maven-plugin</artifactId>
-        <version>\${akka.grpc.version}</version>
+        <groupId>org.apache.pekko</groupId>
+        <artifactId>pekko-grpc-maven-plugin</artifactId>
+        <version>\${pekko.grpc.version}</version>
         <configuration>
           <language>Scala</language>
         </configuration>

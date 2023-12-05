@@ -3,14 +3,14 @@ package com.example.helloworld
 //#import
 import scala.concurrent.duration._
 import scala.concurrent.{ExecutionContext, Future}
-import scala.util.Failure
-import scala.util.Success
-import akka.Done
-import akka.NotUsed
-import akka.actor.typed.ActorSystem
-import akka.actor.typed.scaladsl.Behaviors
-import akka.grpc.GrpcClientSettings
-import akka.stream.scaladsl.Source
+import scala.util.{Failure, Success}
+import org.apache.pekko
+import pekko.Done
+import pekko.NotUsed
+import pekko.actor.typed.ActorSystem
+import pekko.actor.typed.scaladsl.Behaviors
+import pekko.grpc.GrpcClientSettings
+import pekko.stream.scaladsl.Source
 
 //#import
 

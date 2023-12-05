@@ -1,36 +1,12 @@
-# Akka gRPC Quickstart with Scala
+# Apache Pekko gRPC Quickstart with Scala
  
-Akka gRPC is a toolkit for building streaming gRPC servers and clients on top of Akka Streams. This guide will get you started building gRPC based systems with Scala. If you prefer to use Akka gRPC with Java, switch to the [Akka gRPC Quickstart with Java guide](https://developer.lightbend.com/guides/akka-grpc-quickstart-java/). 
+Pekko gRPC is a toolkit for building streaming gRPC servers and clients on top of Pekko Streams. This guide will get you started building gRPC based systems with Scala. If you prefer to use Pekko gRPC with Java, switch to the [Pekko gRPC Quickstart with Java guide](https://github.com/apache/incubator-pekko-grpc-quickstart-java.g8). 
 
-After trying this example the [Akka gRPC documentation](https://doc.akka.io/docs/akka-grpc/) is a good next step to continue learning more about Akka gRPC.
+After trying this example the [Pekko gRPC documentation](https://pekko.apache.org/docs/pekko-grpc/) is a good next step to continue learning more about Pekko gRPC.
 
 ## Downloading the example 
 
-The Hello World example for Scala is a zipped project that includes a distribution of sbt, Maven and Gradle. You can choose any of these build tools. You can run it on Linux, MacOS, or Windows. The only prerequisite is Java 8 or later.
-
-Download and unzip the example:
-
-1. Download the [zip file](https://example.lightbend.com/v1/download/akka-grpc-quickstart-scala?name=akka-grpc-quickstart-scala). 
-1. Extract the zip file to a convenient location: 
-  - On Linux and OSX systems, open a terminal and use the command `unzip akka-grpc-quickstart-scala.zip`. Note: On OSX, if you unzip using Archiver, you also have to make the build files executable:
-
-sbt
-:   ```
-    $ chmod u+x ./sbt
-    $ chmod u+x ./sbt-dist/bin/sbt
-    ```
-    
-Maven
-:   ```
-    Local installation of mvn is required.
-    ```
-
-Gradle
-:   ```
-    $ chmod u+x ./gradlew
-    ```
-
-  - On Windows, use a tool such as File Explorer to extract the project. 
+Follow the instructions in https://github.com/apache/incubator-pekko-grpc-quickstart-scala.g8
 
 ## Running the example
 
@@ -41,8 +17,8 @@ To run Hello World:
 
 1. In a console, change directories to the top level of the unzipped project.
  
-    For example, if you used the default project name, akka-grpc-quickstart-scala, and extracted the project to your root directory,
-    from the root directory, enter: `cd akka-grpc-quickstart-scala`
+    For example, if you used the default project name, pekko-grpc-quickstart-scala, and extracted the project to your root directory,
+    from the root directory, enter: `cd pekko-grpc-quickstart-scala`
 
 1. Compile the project by entering:
 
@@ -121,7 +97,7 @@ To run Hello World:
     ```
 
 
-Congratulations, you just ran your first Akka gRPC server and client. Now take a look at what happened under the covers.
+Congratulations, you just ran your first Pekko gRPC server and client. Now take a look at what happened under the covers.
 
 You can end the programs with `ctrl-c`.
 
@@ -131,8 +107,8 @@ As you saw in the console output, the example outputs several greetings. Let’s
 
 ### Server
 
-First, the `GreeterServer` main class creates an `akka.actor.typed.ActorSystem`, a container in which Actors, 
-Akka Streams and Akka HTTP run. Next, it defines a function from `HttpRequest` to `Future[HttpResponse]` using the `GreeterServiceImpl`. This function
+First, the `GreeterServer` main class creates an `org.apache.pekko..actor.typed.ActorSystem`, a container in which Actors, 
+Pekko Streams and Pekko HTTP run. Next, it defines a function from `HttpRequest` to `Future[HttpResponse]` using the `GreeterServiceImpl`. This function
 handles gRPC requests in the HTTP/2 server and is bound to port 8080 in this example.
 
 @@snip [GreeterServer.scala]($g8src$/scala/com/example/helloworld/GreeterServer.scala) { #import #server }
@@ -143,7 +119,7 @@ in the protobuf file `src/main/protobuf/helloworld.proto`:
 @@snip [helloworld.proto]($g8src$/protobuf/helloworld.proto) { #service-request-reply }
 
 When compiling the project several things are generated from the proto definition. You can find the generated files in 
-@sbt[`target/scala-2.13/akka-grpc/main/`]@maven[`target/generated-sources/`]@gradle[`build/generated/source/proto/main/`]
+@sbt[`target/scala-2.13/pekko-grpc/main/`]@maven[`target/generated-sources/`]@gradle[`build/generated/source/proto/main/`]
 if you are curious.
 
 For the server the following classes are generated:
@@ -174,7 +150,7 @@ We need an `ActorSystem` and then the `GreeterServiceClient` can be created and 
 
 @@snip [GreeterClient.scala]($g8src$/scala/com/example/helloworld/GreeterClient.scala) { #import #client-request-reply }
 
-Note that clients and servers don't have to be implemented with Akka gRPC. They can be implemented/used with other libraries or languages and interoperate according to the gRPC specification.
+Note that clients and servers don't have to be implemented with Pekko gRPC. They can be implemented/used with other libraries or languages and interoperate according to the gRPC specification.
 
 ### Other types of calls
 

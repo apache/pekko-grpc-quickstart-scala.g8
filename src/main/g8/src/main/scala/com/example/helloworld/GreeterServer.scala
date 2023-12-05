@@ -10,15 +10,16 @@ import java.security.cert.CertificateFactory
 
 import scala.io.Source
 
-import akka.actor.typed.ActorSystem
-import akka.actor.typed.scaladsl.Behaviors
-import akka.http.scaladsl.ConnectionContext
-import akka.http.scaladsl.Http
-import akka.http.scaladsl.HttpsConnectionContext
-import akka.http.scaladsl.model.HttpRequest
-import akka.http.scaladsl.model.HttpResponse
-import akka.pki.pem.DERPrivateKeyLoader
-import akka.pki.pem.PEMDecoder
+import org.apache.pekko
+import pekko.actor.typed.ActorSystem
+import pekko.actor.typed.scaladsl.Behaviors
+import pekko.http.scaladsl.ConnectionContext
+import pekko.http.scaladsl.Http
+import pekko.http.scaladsl.HttpsConnectionContext
+import pekko.http.scaladsl.model.HttpRequest
+import pekko.http.scaladsl.model.HttpResponse
+import pekko.pki.pem.DERPrivateKeyLoader
+import pekko.pki.pem.PEMDecoder
 import com.typesafe.config.ConfigFactory
 import javax.net.ssl.KeyManagerFactory
 import javax.net.ssl.SSLContext
@@ -36,7 +37,7 @@ object GreeterServer {
 
   def main(args: Array[String]): Unit = {
     // important to enable HTTP/2 in ActorSystem's config
-    val conf = ConfigFactory.parseString("akka.http.server.enable-http2 = on")
+    val conf = ConfigFactory.parseString("pekko.http.server.enable-http2 = on")
       .withFallback(ConfigFactory.defaultApplication())
     val system = ActorSystem[Nothing](Behaviors.empty[Nothing], "GreeterServer", conf)
     new GreeterServer(system).run()

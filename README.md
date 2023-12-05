@@ -1,27 +1,29 @@
-# Akka gRPC Quickstart with Scala
+# Apache Pekko gRPC Quickstart with Scala
 
 ## Quickstart guide
 
-This example is described in the [Akka gRPC Quickstart with Scala guide](https://developer.lightbend.com/guides/akka-grpc-quickstart-scala/)
-
-The Hello World example illustrates Akka gRPC basics. Within 30 minutes, you should be able to download and run the example and use this guide to understand how the example is constructed.
+The Hello World example illustrates Pekko gRPC basics. Within 30 minutes, you should be able to download and run the example and use this guide to understand how the example is constructed.
 
 ## Giter8 template
 
-It can also be used as a [Giter8][g8] template for Akka with Scala.
+It can also be used as a [Giter8][g8] template for Pekko with Scala.
 
 Prerequisites:
-- JDK 17
-- [sbt][sbt] 1.9.x or higher ([download here][sbt_download])
+- JDK 8
+- [sbt][sbt] 1.4.x or higher ([download here][sbt_download])
 
 Open a console and run the following command to apply this template:
  ```
-sbt new akka/akka-grpc-quickstart-scala.g8
+sbt new apache/incubator-pekko-grpc-quickstart-scala.g8
  ```
 
-This template will prompt for the name of the project. Press `Enter` if the default values suit you.
+You can also install [Giter8](http://www.foundweekends.org/giter8/setup.html) and install using:
+ ```
+g8 apache/incubabor-pekko-grpc-quickstart-scala.g8
+ ```
 
-Once inside the project folder, follow the [Akka gRPC Quickstart with Scala guide](https://developer.lightbend.com/guides/akka-grpc-quickstart-scala/) run both the server and the client and also to learn more about how this Hello World project works.
+
+This template will prompt for the name of the project. Press `Enter` if the default values suit you.
 
 ## Template license
 

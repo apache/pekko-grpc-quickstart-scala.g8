@@ -23,5 +23,5 @@ be tested without binding it to a HTTP server.
 As an exercise to increase your understanding you could add tests for the @ref[streaming call](streaming.md), both as
 integration test and unit test style.
 
-The Akka documentation of [Testing streams](https://doc.akka.io/docs/akka/current/stream/stream-testkit.html) might
+The Pekko documentation of [Testing streams](https://pekko.apache.org/docs/pekko/current/stream/stream-testkit.html) might
 be useful.
