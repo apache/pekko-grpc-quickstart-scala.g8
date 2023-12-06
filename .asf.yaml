@@ -1,0 +1,46 @@
+# https://cwiki.apache.org/confluence/display/INFRA/Git+-+.asf.yaml+features
+
+github:
+  description: "Pekko gRPC Quickstart for Scala"
+  homepage: https://pekko.apache.org/
+  labels:
+    - pekko
+    - pekko-grpc
+    - scala
+    - grpc
+
+  protected_tags:
+    - "v*.*.*"
+
+  features:
+    # Enable wiki for documentation
+    wiki: false
+    # Enable issue management
+    issues: true
+    # Enable projects for project management boards
+    projects: false
+    
+  enabled_merge_buttons:
+    squash:  true
+    merge:   false
+    rebase:  true
+
+  protected_branches:
+    main:
+      required_status_checks:
+        # strict means "Require branches to be up to date before merging".
+        strict: false
+        # contexts are the names of checks that must pass
+        contexts:
+          - Code is formatted
+          - Check headers
+      required_pull_request_reviews:
+        dismiss_stale_reviews: false
+        require_code_owner_reviews: false
+        required_approving_review_count: 1
+
+notifications:
+  commits:              commits@pekko.apache.org
+  issues:               notifications@pekko.apache.org
+  pullrequests:         notifications@pekko.apache.org
+  discussions:          notifications@pekko.apache.org
