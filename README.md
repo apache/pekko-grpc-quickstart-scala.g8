@@ -10,7 +10,7 @@ It can also be used as a [Giter8][g8] template for Pekko with Scala.
 
 Prerequisites:
 - JDK 8
-- [sbt][sbt] 1.4.x or higher ([download here][sbt_download])
+- [sbt][sbt] 1.9.x or higher ([download here][sbt_download])
 
 Open a console and run the following command to apply this template:
  ```
