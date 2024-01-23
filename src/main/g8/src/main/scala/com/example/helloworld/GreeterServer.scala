@@ -37,7 +37,7 @@ object GreeterServer {
 
   def main(args: Array[String]): Unit = {
     // important to enable HTTP/2 in ActorSystem's config
-    val conf = ConfigFactory.parseString("pekko.http.server.enable-http2 = on")
+    val conf = ConfigFactory.parseString("pekko.http.server.preview.enable-http2 = on")
       .withFallback(ConfigFactory.defaultApplication())
     val system = ActorSystem[Nothing](Behaviors.empty[Nothing], "GreeterServer", conf)
     new GreeterServer(system).run()
