@@ -13,7 +13,7 @@ repositories {
 }
 
 dependencies {
-  implementation 'org.scala-lang:scala-library:2.13.12'
+  implementation 'org.scala-lang:scala-library:2.13.13'
 
   implementation 'org.apache.pekko:pekko-actor-typed_2.13:$pekko_version$'
   implementation 'org.apache.pekko:pekko-discovery_2.13:$pekko_version$'
@@ -24,7 +24,7 @@ dependencies {
 
   testImplementation 'org.apache.pekko:pekko-actor-testkit-typed_2.13:$pekko_version$'
   testImplementation 'org.apache.pekko:pekko-stream-testkit_2.13:$pekko_version$'
-  testImplementation 'org.scalatest:scalatest_2.13:3.2.17'
+  testImplementation 'org.scalatest:scalatest_2.13:3.2.18'
   // optional in Scalatest
   testRuntimeOnly 'com.vladsch.flexmark:flexmark-all:0.62.2'
   // Required by https://github.com/maiflai/gradle-scalatest
