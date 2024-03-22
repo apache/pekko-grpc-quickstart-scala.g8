@@ -1,12 +1,12 @@
 # Apache Pekko gRPC Quickstart with Scala
  
-Pekko gRPC is a toolkit for building streaming gRPC servers and clients on top of Pekko Streams. This guide will get you started building gRPC based systems with Scala. If you prefer to use Pekko gRPC with Java, switch to the [Pekko gRPC Quickstart with Java guide](https://github.com/apache/incubator-pekko-grpc-quickstart-java.g8). 
+Pekko gRPC is a toolkit for building streaming gRPC servers and clients on top of Pekko Streams. This guide will get you started building gRPC based systems with Scala. If you prefer to use Pekko gRPC with Java, switch to the [Pekko gRPC Quickstart with Java guide](https://github.com/apache/pekko-grpc-quickstart-java.g8). 
 
 After trying this example the [Pekko gRPC documentation](https://pekko.apache.org/docs/pekko-grpc/current/) is a good next step to continue learning more about Pekko gRPC.
 
 ## Downloading the example 
 
-Follow the instructions in https://github.com/apache/incubator-pekko-grpc-quickstart-scala.g8
+Follow the instructions in https://github.com/apache/pekko-grpc-quickstart-scala.g8
 
 ## Running the example
 
