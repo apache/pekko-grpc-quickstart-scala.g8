@@ -9,8 +9,8 @@
   <version>0.1-SNAPSHOT</version>
 
   <properties>
-    <maven.compiler.source>17</maven.compiler.source>
-    <maven.compiler.target>17</maven.compiler.target>
+    <maven.compiler.source>8</maven.compiler.source>
+    <maven.compiler.target>8</maven.compiler.target>
     <pekko.version>$pekko_version$</pekko.version>
     <pekko.grpc.version>$pekko_grpc_version$</pekko.grpc.version>
     <scala.binary.version>$scala_major_version$</scala.binary.version>
