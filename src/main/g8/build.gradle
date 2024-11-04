@@ -20,7 +20,7 @@ dependencies {
   implementation 'org.apache.pekko:pekko-stream_$scala_major_version$:$pekko_version$'
   implementation 'org.apache.pekko:pekko-pki_$scala_major_version$:$pekko_version$'
 
-  implementation 'ch.qos.logback:logback-classic:1.2.13'
+  implementation 'ch.qos.logback:logback-classic:1.3.14'
 
   testImplementation 'org.apache.pekko:pekko-actor-testkit-typed_$scala_major_version$:$pekko_version$'
   testImplementation 'org.apache.pekko:pekko-stream-testkit_$scala_major_version$:$pekko_version$'

@@ -1,5 +1,5 @@
 // Scala version to use inside sbt
-scalaVersion := "2.12.19"
+scalaVersion := "2.12.20"
 
 Compile / paradoxProperties ++= Map(
   "snip.g8root.base_dir" -> "../../../../src/main/g8",
