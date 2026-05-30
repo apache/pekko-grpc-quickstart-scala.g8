@@ -21,9 +21,9 @@ libraryDependencies ++= Seq(
   "org.apache.pekko" %% "pekko-discovery" % pekkoVersion,
   "org.apache.pekko" %% "pekko-pki" % pekkoVersion,
 
-  "ch.qos.logback" % "logback-classic" % "1.3.15",
+  "ch.qos.logback" % "logback-classic" % "1.3.16",
 
   "org.apache.pekko" %% "pekko-actor-testkit-typed" % pekkoVersion % Test,
   "org.apache.pekko" %% "pekko-stream-testkit" % pekkoVersion % Test,
-  "org.scalatest" %% "scalatest" % "3.2.19" % Test
+  "org.scalatest" %% "scalatest" % "3.2.20" % Test
 )
