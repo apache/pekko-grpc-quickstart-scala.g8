@@ -25,10 +25,10 @@ jobs:
           java-version: 11
 
       - name: Install sbt
-        uses: sbt/setup-sbt@6c68d2fe8dfbc0a0534d70101baa2e0420e1a506 # v1.1.9
+        uses: sbt/setup-sbt@9d56cf12e9b58d219605e1d8bfe69a8395fedde0 # v1.5.1
 
       - name: Cache Coursier cache
-        uses: coursier/cache-action@4e2615869d13561d626ed48655e1a39e5b192b3c # 6.4.7
+        uses: coursier/cache-action@95e5b1029b6b86e7bac033ee44a0697d8a527d2d # 8.1.1
 
       - name: sbt & Paradox
         run: sbt test docs/paradox
