@@ -17,10 +17,10 @@ import org.scalatest.wordspec.AnyWordSpec
 import scala.concurrent.duration._
 
 class GreeterSpec
-  extends AnyWordSpec
-  with BeforeAndAfterAll
-  with Matchers
-  with ScalaFutures {
+    extends AnyWordSpec
+    with BeforeAndAfterAll
+    with Matchers
+    with ScalaFutures {
 
   implicit val patience: PatienceConfig = PatienceConfig(scaled(5.seconds), scaled(100.millis))
 
