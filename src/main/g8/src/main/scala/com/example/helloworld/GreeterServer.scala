@@ -2,7 +2,6 @@ package com.example.helloworld
 
 //#import
 
-
 import java.security.KeyStore
 import java.security.SecureRandom
 import java.security.cert.Certificate
@@ -30,7 +29,6 @@ import scala.util.Failure
 import scala.util.Success
 import scala.concurrent.duration._
 //#import
-
 
 //#server
 object GreeterServer {
@@ -71,8 +69,7 @@ class GreeterServer(system: ActorSystem[_]) {
 
     bound
   }
-  //#server
-
+  // #server
 
   private def serverHttpContext: HttpsConnectionContext = {
     val privateKey =
@@ -98,7 +95,7 @@ class GreeterServer(system: ActorSystem[_]) {
 
   private def readPrivateKeyPem(): String =
     Source.fromResource("certs/server1.key").mkString
-  //#server
+  // #server
 
 }
 //#server

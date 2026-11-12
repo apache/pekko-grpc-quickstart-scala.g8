@@ -13,10 +13,10 @@ import org.scalatest.wordspec.AnyWordSpec
 import scala.concurrent.duration._
 
 class GreeterServiceImplSpec
-  extends AnyWordSpec
-  with BeforeAndAfterAll
-  with Matchers
-  with ScalaFutures {
+    extends AnyWordSpec
+    with BeforeAndAfterAll
+    with Matchers
+    with ScalaFutures {
 
   val testKit = ActorTestKit()
 
