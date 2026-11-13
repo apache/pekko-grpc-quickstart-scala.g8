@@ -27,3 +27,7 @@ libraryDependencies ++= Seq(
   "org.apache.pekko" %% "pekko-stream-testkit" % pekkoVersion % Test,
   "org.scalatest" %% "scalatest" % "3.2.20" % Test
 )
+
+addCommandAlias(
+  "sortImports",
+  """;scalafixEnable;scalafixAll OrganizeImports""")
