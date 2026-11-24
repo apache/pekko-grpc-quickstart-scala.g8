@@ -2,8 +2,8 @@ package com.example.helloworld
 
 //#import
 import scala.concurrent.duration._
-import scala.concurrent.{ExecutionContext, Future}
-import scala.util.{Failure, Success}
+import scala.concurrent.{ ExecutionContext, Future }
+import scala.util.{ Failure, Success }
 import org.apache.pekko
 import pekko.Done
 import pekko.NotUsed
@@ -29,10 +29,10 @@ object GreeterClient {
 
     names.foreach(singleRequestReply)
 
-    //#client-request-reply
+    // #client-request-reply
     if (args.nonEmpty)
       names.foreach(streamingBroadcast)
-    //#client-request-reply
+    // #client-request-reply
 
     def singleRequestReply(name: String): Unit = {
       println(s"Performing request: $name")
@@ -45,8 +45,8 @@ object GreeterClient {
       }
     }
 
-    //#client-request-reply
-    //#client-stream
+    // #client-request-reply
+    // #client-stream
     def streamingBroadcast(name: String): Unit = {
       println(s"Performing streaming requests: $name")
 
@@ -69,8 +69,8 @@ object GreeterClient {
           println(s"Error streamingBroadcast: $e")
       }
     }
-    //#client-stream
-    //#client-request-reply
+    // #client-stream
+    // #client-request-reply
 
   }
 
